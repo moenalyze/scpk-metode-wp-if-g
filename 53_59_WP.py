@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# --- Setup Page ---
+# --- Konfigurasi Halaman ---
 def setup_page():
   st.set_page_config(page_title="SPK Weighted Product - Tanaman", layout="wide")
   st.title("🌱 Sistem Pendukung Keputusan: Pemilihan Lahan Terbaik untuk Tanaman")
@@ -22,7 +22,7 @@ def apply_custom_style():
   </style>
   """, unsafe_allow_html=True)
 
-# --- Sidebar Config ---
+# --- Konfigurasi Sidebar ---
 def sidebar_konfigurasi(kriteria_alias):
   st.sidebar.header("🔧 Konfigurasi Kriteria")
   nama_tanaman = st.sidebar.text_input("🌶️ Nama Tanaman", placeholder="Misal: Cabai")
@@ -49,7 +49,7 @@ def sidebar_konfigurasi(kriteria_alias):
 
   return nama_tanaman, kriteria_values, bobot
 
-# --- Weighted Product Calculation ---
+# --- Perhitungan WP ---
 def weighted_product(data_kriteria, kriteria_values, bobot):
   norm_bobot = [b / sum(bobot) for b in bobot]
   s = []
