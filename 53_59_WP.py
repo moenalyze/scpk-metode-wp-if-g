@@ -6,6 +6,27 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="SPK Weighted Product - Tanaman", layout="wide")
 st.title("🌱 Sistem Pendukung Keputusan: Pemilihan Lahan Terbaik untuk Tanaman")
 
+st.markdown(
+  """
+  <style>
+  /* Import Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  
+  /* Apply font ke semua teks */
+  html, body, .stApp, .stMarkdown, .stButton>button, .stSelectbox, .stTextInput, .stSlider {
+      font-family: 'Poppins', sans-serif !important;
+  }
+  
+  /* Judul lebih tebal */
+  h1 {
+      font-weight: 600 !important;
+      color: #D4A373 !important;  # Warna cokelat tanah
+  }
+  </style>
+  """,
+  unsafe_allow_html=True
+)
+
 # --- Load Dataset ---
 df = pd.read_csv("Smart_Farming_Crop_Yield_2024.csv")
 
@@ -108,21 +129,12 @@ if nama_tanaman:
   Tanaman **{nama_tanaman}** sebaiknya ditanam di **{best_farm['Farm ID']}**  
   📍 Lokasi: **{best_farm['Region']}**
   """)
-  
-  # install dulu
-  # import seaborn as sns # type: ignore
-
-  # with st.expander("🧠 Korelasi Antar Kriteria"):
-  #   fig_corr, ax_corr = plt.subplots()
-  #   sns.heatmap(df[list(kriteria_alias.keys())].corr(), annot=True, cmap="YlGnBu", ax=ax_corr)
-  #   st.pyplot(fig_corr)
-
 
   with st.expander("📦 Informasi Dataset"):
     st.markdown(f"""
     - Jumlah data: **{df.shape[0]} baris**
     - Jumlah kriteria: **{len(kriteria_alias)}**
-    - Sumber: *Smart_Farming_Crop_Yield_2024.csv (Link)*
+    - Sumber: *Smart_Farming_Crop_Yield_2024.csv (https://www.kaggle.com/datasets/atharvasoundankar/smart-farming-sensor-data-for-yield-prediction/data)*
     """
   )
   
