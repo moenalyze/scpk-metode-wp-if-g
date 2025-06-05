@@ -1,4 +1,4 @@
-**Note: taruh config.toml di C:\Users\<username>\.streamlit\config.toml untuk ubah warna tema**
+**Note: taruh config.toml di C:\Users\User Name\.streamlit\config.toml untuk ubah warna tema**
 
 **Projek akhir Praktikum Sistem Cerdas dan Pendukung Keputusan IF-G**
 
