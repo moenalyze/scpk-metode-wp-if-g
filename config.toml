@@ -1,0 +1,7 @@
+[theme]
+base = "dark"
+primaryColor = "#D4A373"          # Cokelat tanah (seperti pupuk organik)
+backgroundColor = "#2D2424"       # Dark earthy brown
+secondaryBackgroundColor = "#5C3D2E"  # Medium brown (seperti tanah subur)
+textColor = "#F0E9D2"            # Cream alami (seperti kertas parchment)
+font = "sans serif"
